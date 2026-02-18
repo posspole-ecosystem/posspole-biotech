@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>POSSPOLE | Contact Us</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+darkMode:"class",
+theme:{
+extend:{
+colors:{
+primary:"#1152d4",
+"primary-light":"#3b76e8",
+"primary-dark":"#0a3aa0",
+"background-light":"#f6f6f8",
+"background-dark":"#0b1019",
+"surface-dark":"#131b2b"
+},
+fontFamily:{display:["Inter","sans-serif"]}
+}
+}
+}
+</script>
+
+<style>
+body{font-family:'Inter',sans-serif;}
+.glass-nav{
+background:rgba(11,16,25,0.8);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-200">
+
+<!-- ===== SAME HEADER AS INDEX ===== -->
+<header class="fixed w-full top-0 z-50 bg-background-light/90 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+
+<div class="flex items-center gap-2 text-white font-bold text-2xl">
+<span class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">P</span>
+POSSPOLE
+</div>
+
+<nav class="hidden md:flex space-x-8">
+    <a href="index.html">Home</a>
+<a href="index.html#technology">Technology</a>
+<a href="index.html#applications">Applications</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#partners">Partners</a>
+</nav>
+
+<a href="contact.html" class="px-6 py-2 bg-primary text-white rounded-full">
+Contact
+</a>
+
+</div>
+</div>
+</header>
+
+<!-- ===== HERO ===== -->
+<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/90 to-background-dark"></div>
+
+<div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Contact Us</h1>
+<p class="text-xl text-slate-400 max-w-2xl mx-auto">
+Connecting science with solutions. Reach out to our team of experts.
+</p>
+</div>
+</header>
+
+<!-- ===== CONTACT CONTENT (YOUR ORIGINAL DESIGN) ===== -->
+<main class="relative z-10 -mt-10 mb-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="bg-white dark:bg-[#151b2b] rounded-2xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col lg:flex-row">
+
+<!-- LEFT INFO -->
+<div class="lg:w-5/12 p-8 lg:p-12 bg-slate-50 dark:bg-[#1a2030]">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">
+Let’s Be Partners
+</h2>
+
+<p class="text-slate-600 dark:text-slate-400 mb-8">
+Our solutions are for you. Whether you are a research laboratory or industrial company, POSSPOLE opens the way to concrete and reliable solutions.
+</p>
+
+<div class="space-y-6">
+
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">location_on</span>
+</div>
+<div class="ml-4">
+<h3 class="text-sm font-semibold text-white">Headquarters</h3>
+<p class="text-slate-400 mt-1">
+Biotech Valley, Building 4<br/>
+123 Innovation Drive, Cambridge, MA
+</p>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">email</span>
+</div>
+<div class="ml-4">
+<h3 class="text-sm font-semibold text-white">Email</h3>
+<p class="text-slate-400 mt-1">contact@posspole.com</p>
+</div>
+</div>
+
+<div class="flex items-start">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-icons">phone</span>
+</div>
+<div class="ml-4">
+<h3 class="text-sm font-semibold text-white">Phone</h3>
+<p class="text-slate-400 mt-1">+1 (555) 123-4567</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- RIGHT FORM -->
+<div class="lg:w-7/12 p-8 lg:p-12">
+<form class="space-y-6">
+
+<div class="grid md:grid-cols-2 gap-6">
+<input class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3" placeholder="Full Name"/>
+<input class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3" placeholder="Organization"/>
+</div>
+
+<input class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3" placeholder="Email"/>
+
+<select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3">
+<option>Select Topic...</option>
+<option>Research Collaboration</option>
+<option>Strategic Partnership</option>
+<option>Investment Inquiry</option>
+</select>
+
+<textarea rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3" placeholder="Message"></textarea>
+
+<button type="button" class="px-8 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-primary-light transition">
+Send Message
+</button>
+
+</form>
+</div>
+
+</div>
+</div>
+</main>
+
+<!-- ===== SAME FOOTER AS INDEX ===== -->
+<footer class="bg-background-dark pt-16 pb-8 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<a class="text-xl font-bold text-white flex items-center gap-2 mb-4" href="#">
+<span class="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+<span class="text-white text-xs font-bold">P</span>
+</span>
+                        POSSPOLE
+                    </a>
+<p class="text-gray-400 text-sm">
+                        Pioneering the future of extracellular matrix technology.
+                    </p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4">Company</h5>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4">Technology</h5>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Principle</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Applications</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Patents</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-4">Social Networks</h5>
+<div class="flex space-x-4">
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
+<span class="text-xs">LI</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
+<span class="text-xs">TW</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+<p>© 2023 POSSPOLE. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
