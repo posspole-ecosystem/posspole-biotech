@@ -8,7 +8,7 @@ const PatentSection = () => {
               <span className="text-primary font-semibold uppercase tracking-wide text-xs mb-2 block">Founding Principles</span>
               <h3 className="text-2xl font-bold text-foreground mb-4">Patented Innovation</h3>
               <p className="text-muted-foreground mb-6">
-                Founded by a team of cell biologists and bioengineers, POSSPOLE holds 3 international patents protecting our unique synthesis process. Our scientific board ensures rigorous validation at every step.
+                Founded by a team of cell biologists and bioengineers, SYSPOLE holds 3 international patents protecting our unique synthesis process. Our scientific board ensures rigorous validation at every step.
               </p>
               <div className="flex gap-4">
                 <div className="flex flex-col">

@@ -45,7 +45,7 @@ const Contact = () => {
             <div className="lg:w-5/12 p-8 lg:p-12 bg-secondary">
               <h2 className="text-3xl font-bold text-foreground mb-6">Let's Be Partners</h2>
               <p className="text-muted-foreground mb-8">
-                Our solutions are for you. Whether you are a research laboratory or industrial company, POSSPOLE opens the way to concrete and reliable solutions.
+                Our solutions are for you. Whether you are a research laboratory or industrial company, SYSPOLE opens the way to concrete and reliable solutions.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -66,7 +66,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-sm font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground mt-1">contact@posspole.com</p>
+                    <p className="text-muted-foreground mt-1">contact@syspole.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">

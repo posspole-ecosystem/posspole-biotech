@@ -28,7 +28,7 @@ const PartnersSection = () => {
             <div className="absolute inset-0 p-10 flex flex-col justify-end items-start">
               <h3 className="text-2xl font-bold text-primary-foreground mb-2">Become an Investor</h3>
               <p className="text-muted-foreground mb-6 max-w-sm">Join us in revolutionizing the future of regenerative medicine and biotech.</p>
-              <AnimatedButton text="Invest in POSSPOLE" href="/contact" />
+              <AnimatedButton text="Invest in SYSPOLE" href="/contact" />
             </div>
           </div>
         </div>
