@@ -40,7 +40,7 @@ const AnimatedButton = ({ text, href, onClick, variant = "primary", type = "butt
       <svg
         viewBox="0 0 24 24"
         className={`absolute w-6 -left-1/4 z-[9] transition-all duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:left-4 ${
-          isPrimary ? "fill-primary group-hover:fill-background-dark" : "fill-primary-foreground group-hover:fill-primary-dark"
+          isPrimary ? "fill-primary group-hover:fill-primary-foreground" : "fill-primary-foreground group-hover:fill-[hsl(var(--background-dark))]"
         }`}
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -48,13 +48,15 @@ const AnimatedButton = ({ text, href, onClick, variant = "primary", type = "butt
       </svg>
 
       {/* Text */}
-      <span className="relative z-[1] -translate-x-3 transition-transform duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-3">
+      <span className={`relative z-[1] -translate-x-3 transition-all duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-3 ${
+        isPrimary ? "group-hover:text-primary-foreground" : "group-hover:text-[hsl(var(--background-dark))]"
+      }`}>
         {text}
       </span>
 
       {/* Circle expand */}
       <span
-        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full opacity-0 transition-all duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:w-[220px] group-hover:h-[220px] group-hover:opacity-100 ${
+        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full opacity-0 transition-all duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:w-[400px] group-hover:h-[400px] group-hover:opacity-100 ${
           isPrimary ? "bg-primary" : "bg-primary-foreground"
         }`}
       />
@@ -63,7 +65,7 @@ const AnimatedButton = ({ text, href, onClick, variant = "primary", type = "butt
       <svg
         viewBox="0 0 24 24"
         className={`absolute w-6 right-4 z-[9] transition-all duration-800 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-right-1/4 ${
-          isPrimary ? "fill-primary group-hover:fill-background-dark" : "fill-primary-foreground group-hover:fill-primary-dark"
+          isPrimary ? "fill-primary group-hover:fill-primary-foreground" : "fill-primary-foreground group-hover:fill-[hsl(var(--background-dark))]"
         }`}
         xmlns="http://www.w3.org/2000/svg"
       >
