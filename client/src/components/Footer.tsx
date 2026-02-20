@@ -10,7 +10,7 @@ const Footer = () => {
               <span className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground text-xs font-bold">P</span>
               </span>
-              SYSPOLE
+              SYLPOLE
             </Link>
             <p className="text-muted-foreground text-sm">
               Pioneering the future of extracellular matrix technology.
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>© 2023 SYSPOLE. All rights reserved.</p>
+          <p>© 2023 SYLPOLE. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a className="hover:text-primary-foreground transition-colors" href="#">Privacy Policy</a>
             <a className="hover:text-primary-foreground transition-colors" href="#">Terms of Service</a>

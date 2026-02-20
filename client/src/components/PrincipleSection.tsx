@@ -14,7 +14,7 @@ const PrincipleSection = () => {
                 At the core of our innovation lies a proprietary method to synthesize an Extracellular Matrix (ECM) that mimics nature itself. By combining <strong className="text-primary-light">hyaluronic acid</strong> with key structural proteins, we create a scaffold that cells recognize as home.
               </p>
               <p>
-                Unlike standard petri dishes or synthetic polymers, SYSPOLE's matrix provides the biochemical and mechanical cues necessary for cells to behave exactly as they would inside the human body.
+                Unlike standard petri dishes or synthetic polymers, SYLPOLE's matrix provides the biochemical and mechanical cues necessary for cells to behave exactly as they would inside the human body.
               </p>
             </div>
             <div className="mt-8">

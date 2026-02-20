@@ -82,7 +82,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background-dark/90 via-background-dark/70 to-background-dark/90" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground mb-6">SYSPOLE</h1>
+        <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground mb-6">SYLPOLE</h1>
         <h2 className="text-2xl md:text-3xl text-primary-light mb-6">
           Disruptive Technology for Regenerative Medicine
         </h2>

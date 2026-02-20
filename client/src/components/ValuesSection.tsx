@@ -38,7 +38,7 @@ const ValuesSection = () => {
           <div className="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">Who Are We?</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              SYSPOLE is a diverse collective of dreamers and doers. From molecular biologists to business strategists, we are united by a single mission: to harness the power of biology to heal.
+              SYLPOLE is a diverse collective of dreamers and doers. From molecular biologists to business strategists, we are united by a single mission: to harness the power of biology to heal.
             </p>
             <a className="text-primary font-medium hover:text-primary-light inline-flex items-center" href="#">
               Meet the team
