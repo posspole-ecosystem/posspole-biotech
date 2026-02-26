@@ -87,13 +87,15 @@ const HeroSection = () => {
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
 
   {/* 🔥 Logos Row */}
-  <div className="flex justify-center items-center gap-10 mb-8">
+  <div className="flex justify-center items-center gap-3 mb-8">
     <img
       src={logo1}
       alt="Partner Logo 1"
       className="h-14 md:h-16 w-auto object-contain opacity-90"
     />
-    
+    <span className="text-3xl md:text-4xl font-semibold text-primary-light">
+    &
+  </span>
     <img
       src={logo2}
       alt="Partner Logo 2"
