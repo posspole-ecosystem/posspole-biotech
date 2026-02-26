@@ -87,7 +87,7 @@ const HeroSection = () => {
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
 
   {/* 🔥 Logos Row */}
-  <div className="flex justify-center items-center gap-3 mb-8">
+  <div className="flex justify-center items-center gap-2 mb-8">
     <img
       src={logo1}
       alt="Partner Logo 1"
@@ -102,16 +102,16 @@ const HeroSection = () => {
       className="h-14 md:h-16 w-auto object-contain opacity-90"
     />
   </div>
-
+<h2 className="text-2xl md:text-3xl text-primary-light mb-6">
+         Join their force to bring products and services in Indian market with
+        </h2>
   <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground mb-6">
     SYLPOLE
   </h1>
-        <h2 className="text-2xl md:text-3xl text-primary-light mb-6">
-          Disruptive Technology for Regenerative Medicine
-        </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-10">
-          The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
-        </p>
+        
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-10">
+  The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
+</p>
         <AnimatedButton text="Discover Our Technology" href="#principle" />
       </div>
     </section>
