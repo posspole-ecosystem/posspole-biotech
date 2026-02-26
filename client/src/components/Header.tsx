@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const location = useLocation();
@@ -14,9 +15,13 @@ const Header = () => {
     <header className="fixed w-full top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/10 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="text-2xl font-bold text-foreground">
-            SYLPOLE
-          </Link>
+          <Link to="/" className="flex items-center">
+  <img
+    src={logo}
+    alt="Sylpole Logo"
+    className="h-10 w-auto object-contain"
+  />
+</Link>
 
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
