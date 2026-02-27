@@ -2,6 +2,26 @@ import { useState } from "react";
 
 const TechnologySection = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [isClosingModal, setIsClosingModal] = useState(false);
+
+  const [openClinicalModal, setOpenClinicalModal] = useState(false);
+  const [isClosingClinical, setIsClosingClinical] = useState(false);
+
+  const handleCloseModal = () => {
+    setIsClosingModal(true);
+    setTimeout(() => {
+      setOpenModal(false);
+      setIsClosingModal(false);
+    }, 300);
+  };
+
+  const handleCloseClinical = () => {
+    setIsClosingClinical(true);
+    setTimeout(() => {
+      setOpenClinicalModal(false);
+      setIsClosingClinical(false);
+    }, 300);
+  };
 
   return (
     <section className="py-24 bg-background" id="technology">
@@ -34,7 +54,10 @@ const TechnologySection = () => {
           </div>
 
           {/* ================= CLINICAL APPLICATIONS ================= */}
-          <div className="relative rounded-2xl overflow-hidden bg-surface-dark border border-foreground/5 shadow-xl hover:shadow-2xl transition-shadow group">
+          <div
+            onClick={() => setOpenClinicalModal(true)}
+            className="relative rounded-2xl overflow-hidden bg-surface-dark border border-foreground/5 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+          >
             <div className="p-8 md:p-12 flex flex-col h-full">
               <div className="mb-6 w-16 h-16 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400">
                 <span className="material-icons text-4xl">science</span>
@@ -48,84 +71,112 @@ const TechnologySection = () => {
                 From skin grafts to cardiac patches, explore how our technology is being deployed in pre-clinical and clinical settings.
               </p>
 
-              <a
-                href="#"
-                className="inline-flex items-center px-6 py-3 border border-teal-500/50 text-teal-400 hover:bg-teal-500 hover:text-primary-foreground rounded-lg transition-colors w-max"
-              >
+              <div className="inline-flex items-center px-6 py-3 border border-teal-500/50 text-teal-400 rounded-lg w-max">
                 Learn more
                 <span className="material-icons ml-2 text-sm">arrow_forward</span>
-              </a>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
-{/* ================= MODAL ================= */}
-{openModal && (
-  <div
-    className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4"
-    onClick={() => setOpenModal(false)}
-  >
-    <div
-      className="bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]"
-      onClick={(e) => e.stopPropagation()}
-    >
-      {/* Close Button */}
-      <button
-        onClick={() => setOpenModal(false)}
-        className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
-      >
-        ✕
-      </button>
 
-      {/* Title */}
-      <h2 className="text-3xl font-bold text-center mb-6 text-primary">
-        Organisyl Technology
-      </h2>
+      {/* ================= OUR TECHNOLOGY MODAL ================= */}
+      {openModal && (
+        <div
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4"
+          onClick={handleCloseModal}
+        >
+          <div
+            className={`bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]
+            ${isClosingModal ? "animate-zoomOut" : "animate-zoomIn"}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
+            >
+              ✕
+            </button>
 
-      {/* Intro Paragraph */}
-      <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">
-       
-      </p>
+            <h2 className="text-3xl font-bold text-center mb-6 text-primary">
+              Organisyl Technology
+            </h2>
 
-      {/* ================= IMAGE SECTION ================= */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
 
-        {/* First Image */}
-        <div className="flex flex-col items-center">
-          <img
-            src="/organisyl1.jpg"
-            alt="Organisyl ECM"
-            className="rounded-xl shadow-lg w-full"
-          />
-          <p className="text-sm text-muted-foreground mt-4 text-center">
-            Organisyl technology is the first and unique in vitro organ-specific Extra-Cellular Matrix allowing to reproduce in vitro organ that faithfully reproduces in vivo organ with cells embedded in the right microenvironment.
-          </p>
-        </div>
-
-        {/* Second Image */}
-        <div className="flex flex-col items-center">
-          <img
-            src="/organisyl2.jpg"
-            alt="HCS Pharma IMCELLYS"
-            className="rounded-xl shadow-lg w-full"
-          />
-          <p className="text-sm text-muted-foreground mt-4 text-center">
-            Based on this breakthrough technology, services and products are developed and proposed in India for biotech, pharmaceutical, cosmetics and nutraceutical industries:
-          </p>
-        </div>
-      </div>
-
-      {/* ================= FULL WIDTH CONTENT BELOW ================= */}
-      <div className="space-y-4 text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-      
-      </div>
-
-    </div>
+              <div className="flex flex-col items-center">
+  <div className="overflow-hidden rounded-xl shadow-lg w-full">
+    <img
+      src="/organisyl1.jpg"
+      alt="Organisyl ECM"
+      className="w-full transition-transform duration-500 ease-in-out hover:scale-110"
+    />
   </div>
-)}
-        
-      
+                <p className="text-sm text-muted-foreground mt-4 text-center">
+                  Organisyl technology is the first and unique in vitro organ-specific Extra-Cellular Matrix allowing to reproduce in vitro organ that faithfully reproduces in vivo organ.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="overflow-hidden rounded-xl shadow-lg w-full">
+                <img
+                  src="/organisyl2.jpg"
+                  alt="Organisyl Platform"
+                   className="w-full transition-transform duration-500 ease-in-out hover:scale-110"
+                />
+                 </div>
+                <p className="text-sm text-muted-foreground mt-4 text-center">
+                  Services and products are developed for biotech, pharmaceutical, cosmetics and nutraceutical industries.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ================= CLINICAL APPLICATIONS MODAL ================= */}
+      {openClinicalModal && (
+        <div
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4"
+          onClick={handleCloseClinical}
+        >
+          <div
+            className={`bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]
+            ${isClosingClinical ? "animate-zoomOut" : "animate-zoomIn"}`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={handleCloseClinical}
+              className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
+            >
+              ✕
+            </button>
+
+            <h2 className="text-3xl font-bold text-center mb-6 text-teal-500">
+              Clinical Applications
+            </h2>
+
+           <div className="overflow-hidden rounded-xl shadow-lg w-full md:w-3/4 max-h-[300px] mx-auto mb-6">
+  <img
+    src="/clinical.jpg"
+    alt="Clinical Applications"
+    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+  />
+</div>
+
+            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
+              Our extracellular matrix platform enables regenerative therapies
+              including skin grafts, cardiac tissue patches, and organ-repair
+              scaffolds. The system bridges laboratory research and clinical
+              implementation for improved patient outcomes.
+            </p>
+
+          </div>
+        </div>
+      )}
+
     </section>
   );
 };
