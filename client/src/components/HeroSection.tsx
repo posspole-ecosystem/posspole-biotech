@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import AnimatedButton from "./AnimatedButton";
 import logo1 from "../assets/logo1.png";
 import logo2 from "../assets/logo2.png";
+import logo4 from "../assets/logo4.png";
+import heroBg from "../assets/hero-bg.jpg";
 
 
 const HeroSection = () => {
@@ -73,27 +75,27 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
-      <img
-        ref={imgRef}
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC39QP3xAtNJfUFgQ5u0NynNaHljTRfN9aI3zDFiIIPY2rdmYWb5FgMp5T4QVbBSA7h1BqNGa25FC4C-_NSV6sTgpLkoTbQpwO3M6pvj0WeSGq_pjszlOUIr7V-0gTyi-ViZrvl04ZGEGnwKmw_lmyQkYbeEI1c7CKg7hrPYqz_KnKaaJp6gqhkSnKtDLoakqaRl504LgsKExFMcpcGZrE8ZmfytgbVEfxy_tw7SmAM61RHaaVmkxa73_IC_v2LaEHPLBvOErkfpsI"
-        className="hero-bg-image"
-        alt="Lab background"
-      />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+     <img
+  ref={imgRef}
+  src={heroBg}
+  alt="Biotech background"
+ className="absolute inset-0 w-full min-h-full object-cover object-center"
+ />
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div ref={glowRef} className="hero-glow" />
-      <div className="absolute inset-0 bg-gradient-to-br from-background-dark/90 via-background-dark/70 to-background-dark/90" />
+     <div className="absolute inset-0 bg-black/40" />
 
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
 
   {/* 🔥 Logos Row */}
-  <div className="flex justify-center items-center gap-2 mb-8">
+  <div className="flex justify-center items-center gap-5 mb-8">
     <img
       src={logo1}
       alt="Partner Logo 1"
       className="h-14 md:h-16 w-auto object-contain opacity-90"
     />
-    <span className="text-3xl md:text-4xl font-semibold text-primary-light">
+    <span className="text-3xl md:text-4xl font-semibold text-white">
     &
   </span>
     <img
@@ -102,17 +104,24 @@ const HeroSection = () => {
       className="h-14 md:h-16 w-auto object-contain opacity-90"
     />
   </div>
-<h2 className="text-2xl md:text-3xl text-primary-light mb-6">
-         Join their force to bring products and services in Indian market with
-        </h2>
-  <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground mb-6">
-    SYLPOLE
-  </h1>
+<h2 className="text-2xl md:text-3xl text-white/60 mb-6 leading-relaxed">
+  Join their force to bring products and services <br />
+  in Indian market with
+</h2>
+  <img
+   src={logo4}
+  alt="SYLPOLE Logo"
+  className="h-16 md:h-24 mb-6 mx-auto"
+/>
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center mb-10">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white/60 mb-10">
   The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
 </p>
-        <AnimatedButton text="Discover Our Technology" href="#principle" />
+        <AnimatedButton
+  text="Discover Our Technology"
+  href="#principle"
+  variant="light"
+/>
       </div>
     </section>
   );
