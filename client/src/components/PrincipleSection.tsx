@@ -5,7 +5,7 @@ const PrincipleSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="fade-in-section">
-            <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">The Principle</span>
+            {/* <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">The Principle</span> */}
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Reproducing the Physiological Environment
             </h2>

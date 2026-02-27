@@ -89,7 +89,7 @@ const HeroSection = () => {
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
 
   {/* 🔥 Logos Row */}
-  <div className="flex justify-center items-center gap-5 mb-8">
+  {/* <div className="flex justify-center items-center gap-5 mb-8">
     <img
       src={logo1}
       alt="Partner Logo 1"
@@ -103,11 +103,11 @@ const HeroSection = () => {
       alt="Partner Logo 2"
       className="h-14 md:h-16 w-auto object-contain opacity-90"
     />
-  </div>
-<h2 className="text-2xl md:text-3xl text-white/60 mb-6 leading-relaxed">
+  </div> */}
+{/* <h2 className="text-2xl md:text-3xl text-white/60 mb-6 leading-relaxed">
   Join their force to bring products and services <br />
   in Indian market with
-</h2>
+</h2> */}
   <img
    src={logo4}
   alt="SYLPOLE Logo"
