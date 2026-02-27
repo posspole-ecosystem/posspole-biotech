@@ -32,7 +32,7 @@ const Footer = () => {
                   state={{ scrollTo: "about" }}
                   className="hover:text-primary transition-colors"
                 >
-                  About Us
+                  
                 </Link>
               </li>
               <li>
@@ -80,7 +80,7 @@ const Footer = () => {
                   to="/"
                   state={{ scrollTo: "applications" }}
                 >
-                  Applications
+                  Application
                 </Link>
               </li>
 
