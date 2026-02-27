@@ -114,68 +114,77 @@ const TechnologySection: React.FC = () => {
       {/* ================= MODAL ================= */}
       {openModal && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4"
+          className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 px-4 py-8"
           onClick={() => setOpenModal(false)}
         >
           <div
-            className="bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]"
+            className="relative w-full max-w-6xl max-h-[90vh] overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_90px_rgba(0,0,0,0.55)]"
+            style={{ backgroundImage: 'radial-gradient(ellipse at top, #0d1b3e 0%, #050c1a 100%)' }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               type="button"
               onClick={() => setOpenModal(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
+              className="absolute top-5 right-5 w-10 h-10 p-2 rounded-xl flex items-center justify-center text-white/40 hover:text-white transition-colors duration-200 ease z-20"
               aria-label="Close modal"
             >
               ✕
             </button>
 
-            {/* Title */}
-            <h2 className="text-3xl font-bold text-center mb-6 text-primary">
-              Organisyl Technology
-            </h2>
+            {/* Inner padding wrapper + Hide Scrollbar Classes */}
+            <div className="py-12 px-8 overflow-y-auto max-h-[90vh] scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              
+              {/* Title with Gradient */}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-center mb-3 bg-gradient-to-r from-[#4f9eff] to-[#a78bfa] bg-clip-text text-transparent">
+                Organisyl Technology
+              </h2>
 
-            {/* Intro Paragraph */}
-            <p className="text-center text-muted-foreground mb-10 max-w-3xl mx-auto">
-              {/* Add intro text here if you want */}
-            </p>
+              {/* Intro Paragraph */}
+              <p className="text-center text-white/55 mb-8 max-w-[600px] mx-auto leading-relaxed">
+                Organ-specific ECM microenvironment designed to mimic in-vivo tissue behavior in-vitro.
+              </p>
 
-            {/* ================= IMAGE SECTION ================= */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-              {/* First Image */}
-              <div className="flex flex-col items-center">
-                <img
-                  src="/organisyl1.jpg"
-                  alt="Organisyl ECM"
-                  className="rounded-xl shadow-lg w-full"
-                />
-                <p className="text-sm text-muted-foreground mt-4 text-center">
-                  Organisyl technology is the first and unique in vitro
-                  organ-specific Extra-Cellular Matrix allowing to reproduce in
-                  vitro organ that faithfully reproduces in vivo organ with
-                  cells embedded in the right microenvironment.
-                </p>
+              {/* Gradient Divider Line */}
+              <div className="mx-auto mb-8 h-[1px] w-[60%] bg-gradient-to-r from-transparent via-[#4f9eff]/50 to-transparent border-0" />
+
+              {/* ================= IMAGE SECTION ================= */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                
+                {/* First Image Card */}
+                <div className="cursor-pointer rounded-[20px] bg-white/[0.04] border border-white/[0.08] backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-6 transition-all duration-300 ease hover:-translate-y-[6px] hover:shadow-[0_16px_48px_rgba(0,100,255,0.2)] hover:border-t-[#4f9eff]/30">
+                  <img
+                    src="/organisyl1.jpg"
+                    alt="Organisyl ECM"
+                    className="w-full h-[220px] sm:h-[260px] object-cover rounded-[12px] brightness-95 contrast-105"
+                  />
+                  <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-white/65 text-center">
+                    Organisyl technology is the first and unique in vitro
+                    organ-specific Extra-Cellular Matrix allowing to reproduce in
+                    vitro organ that faithfully reproduces in vivo organ with
+                    cells embedded in the right microenvironment.
+                  </p>
+                </div>
+
+                {/* Second Image Card */}
+                <div className="cursor-pointer rounded-[20px] bg-white/[0.04] border border-white/[0.08] backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-6 transition-all duration-300 ease hover:-translate-y-[6px] hover:shadow-[0_16px_48px_rgba(0,100,255,0.2)] hover:border-t-[#4f9eff]/30">
+                  <img
+                    src="/organisyl2.jpg"
+                    alt="HCS Pharma IMCELLYS"
+                    className="w-full h-[220px] sm:h-[260px] object-cover rounded-[12px] brightness-95 contrast-105"
+                  />
+                  <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-white/65 text-center">
+                    Based on this breakthrough technology, services and products
+                    are developed and proposed in India for biotech,
+                    pharmaceutical, cosmetics and nutraceutical industries:
+                  </p>
+                </div>
               </div>
 
-              {/* Second Image */}
-              <div className="flex flex-col items-center">
-                <img
-                  src="/organisyl2.jpg"
-                  alt="HCS Pharma IMCELLYS"
-                  className="rounded-xl shadow-lg w-full"
-                />
-                <p className="text-sm text-muted-foreground mt-4 text-center">
-                  Based on this breakthrough technology, services and products
-                  are developed and proposed in India for biotech,
-                  pharmaceutical, cosmetics and nutraceutical industries:
-                </p>
+              {/* ================= FULL WIDTH CONTENT BELOW ================= */}
+              <div className="space-y-4 text-white/65 leading-relaxed text-center max-w-4xl mx-auto">
+                {/* Add more content here if needed */}
               </div>
-            </div>
-
-            {/* ================= FULL WIDTH CONTENT BELOW ================= */}
-            <div className="space-y-4 text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-              {/* Add more content here if needed */}
             </div>
           </div>
         </div>
