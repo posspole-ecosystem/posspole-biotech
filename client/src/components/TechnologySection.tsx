@@ -88,45 +88,59 @@ const TechnologySection = () => {
           onClick={handleCloseModal}
         >
           <div
-            className={`bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]
+            className={`max-w-5xl w-full rounded-[20px] p-[3rem_2rem] relative overflow-y-auto max-h-[90vh] shadow-2xl
+            scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
             ${isClosingModal ? "animate-zoomOut" : "animate-zoomIn"}`}
+            style={{ backgroundImage: 'radial-gradient(ellipse at top, #0d1b3e 0%, #050c1a 100%)' }}
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
+              className="absolute top-4 right-4 p-2 text-white/40 hover:text-white text-xl transition-colors duration-200 ease z-20"
+              aria-label="Close modal"
             >
               ✕
             </button>
 
-            <h2 className="text-3xl font-bold text-center mb-6 text-primary">
+            {/* Gradient Title */}
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 bg-gradient-to-r from-[#4f9eff] to-[#a78bfa] bg-clip-text text-transparent">
               Organisyl Technology
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            {/* Gradient Divider */}
+            <div 
+              className="mx-auto mb-8 h-[1px] w-[60%] border-0" 
+              style={{ background: 'linear-gradient(to right, transparent, rgba(79, 158, 255, 0.5), transparent)' }} 
+            />
 
-              <div className="flex flex-col items-center">
-  <div className="overflow-hidden rounded-xl shadow-lg w-full">
-    <img
-      src="/organisyl1.jpg"
-      alt="Organisyl ECM"
-      className="w-full transition-transform duration-500 ease-in-out hover:scale-110"
-    />
-  </div>
-                <p className="text-sm text-muted-foreground mt-4 text-center">
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+              
+              {/* Card 1 */}
+              <div className="cursor-pointer flex flex-col items-center rounded-[20px] bg-white/[0.04] border border-white/[0.08] backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-6 transition-all duration-300 ease hover:-translate-y-[6px] hover:shadow-[0_16px_48px_rgba(0,100,255,0.2)] hover:border-t-[#4f9eff]/30">
+                <div className="overflow-hidden rounded-[12px] w-full">
+                  <img
+                    src="/organisyl1.jpg"
+                    alt="Organisyl ECM"
+                    className="w-full h-[220px] object-cover brightness-95 contrast-105 transition-transform duration-500 ease-in-out hover:scale-110"
+                  />
+                </div>
+                <p className="text-[15px] text-white/65 mt-4 text-center leading-relaxed">
                   Organisyl technology is the first and unique in vitro organ-specific Extra-Cellular Matrix allowing to reproduce in vitro organ that faithfully reproduces in vivo organ.
                 </p>
               </div>
 
-              <div className="flex flex-col items-center">
-                <div className="overflow-hidden rounded-xl shadow-lg w-full">
-                <img
-                  src="/organisyl2.jpg"
-                  alt="Organisyl Platform"
-                   className="w-full transition-transform duration-500 ease-in-out hover:scale-110"
-                />
-                 </div>
-                <p className="text-sm text-muted-foreground mt-4 text-center">
+              {/* Card 2 */}
+              <div className="cursor-pointer flex flex-col items-center rounded-[20px] bg-white/[0.04] border border-white/[0.08] backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-6 transition-all duration-300 ease hover:-translate-y-[6px] hover:shadow-[0_16px_48px_rgba(0,100,255,0.2)] hover:border-t-[#4f9eff]/30">
+                <div className="overflow-hidden rounded-[12px] w-full">
+                  <img
+                    src="/organisyl2.jpg"
+                    alt="Organisyl Platform"
+                    className="w-full h-[220px] object-cover brightness-95 contrast-105 transition-transform duration-500 ease-in-out hover:scale-110"
+                  />
+                </div>
+                <p className="text-[15px] text-white/65 mt-4 text-center leading-relaxed">
                   Services and products are developed for biotech, pharmaceutical, cosmetics and nutraceutical industries.
                 </p>
               </div>
@@ -143,35 +157,47 @@ const TechnologySection = () => {
           onClick={handleCloseClinical}
         >
           <div
-            className={`bg-white dark:bg-surface-dark max-w-5xl w-full rounded-2xl p-8 relative overflow-y-auto max-h-[90vh]
+            className={`max-w-5xl w-full rounded-[20px] p-[3rem_2rem] relative overflow-y-auto max-h-[90vh] shadow-2xl
+            scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
             ${isClosingClinical ? "animate-zoomOut" : "animate-zoomIn"}`}
+            style={{ backgroundImage: 'radial-gradient(ellipse at top, #0d1b3e 0%, #050c1a 100%)' }}
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
               onClick={handleCloseClinical}
-              className="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-xl"
+              className="absolute top-4 right-4 p-2 text-white/40 hover:text-white text-xl transition-colors duration-200 ease z-20"
+              aria-label="Close modal"
             >
               ✕
             </button>
 
-            <h2 className="text-3xl font-bold text-center mb-6 text-teal-500">
+            {/* Gradient Title */}
+            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-6 bg-gradient-to-r from-[#4f9eff] to-[#a78bfa] bg-clip-text text-transparent">
               Clinical Applications
             </h2>
 
-           <div className="overflow-hidden rounded-xl shadow-lg w-full md:w-3/4 max-h-[300px] mx-auto mb-6">
-  <img
-    src="/clinical.jpg"
-    alt="Clinical Applications"
-    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-  />
-</div>
-
-            <p className="text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
-              Our extracellular matrix platform enables regenerative therapies
-              including skin grafts, cardiac tissue patches, and organ-repair
-              scaffolds. The system bridges laboratory research and clinical
-              implementation for improved patient outcomes.
+            {/* Subtitle matching your spec */}
+            <p className="text-center text-white/55 max-w-[600px] mx-auto mb-6 leading-relaxed">
+              Our extracellular matrix platform enables regenerative therapies including skin grafts, cardiac tissue patches, and organ-repair scaffolds. The system bridges laboratory research and clinical implementation for improved patient outcomes.
             </p>
+
+            {/* Gradient Divider */}
+            <div 
+              className="mx-auto mb-8 h-[1px] w-[60%] border-0" 
+              style={{ background: 'linear-gradient(to right, transparent, rgba(79, 158, 255, 0.5), transparent)' }} 
+            />
+
+            {/* Wrapped in the new Card style */}
+            <div className="cursor-pointer flex flex-col items-center rounded-[20px] bg-white/[0.04] border border-white/[0.08] backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-6 transition-all duration-300 ease hover:-translate-y-[6px] hover:shadow-[0_16px_48px_rgba(0,100,255,0.2)] hover:border-t-[#4f9eff]/30 w-full md:w-3/4 mx-auto mb-6">
+              <div className="overflow-hidden rounded-[12px] w-full">
+                <img
+                  src="/clinical.jpg"
+                  alt="Clinical Applications"
+                  className="w-full h-[220px] md:h-[300px] object-cover brightness-95 contrast-105 transition-transform duration-500 ease-in-out hover:scale-110"
+                />
+              </div>
+            </div>
 
           </div>
         </div>
