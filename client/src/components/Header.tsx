@@ -23,7 +23,7 @@ const Header = () => {
               alt="Sylpole Logo"
               // Note: I added "brightness-0 invert" to force your current dark logo to turn white via CSS. 
               // If you upload an actual white logo image, you can remove those two classes!
-              className="h-10 w-auto object-contain brightness-0 invert"
+              className="h-16 w-auto object-contain brightness-0 invert"
             />
           </Link>
 
