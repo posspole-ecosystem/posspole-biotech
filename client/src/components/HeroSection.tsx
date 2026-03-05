@@ -108,10 +108,10 @@ const HeroSection = () => {
   Join their force to bring products and services <br />
   in Indian market with
 </h2> */}
-  <img
-   src={logo4}
+ <img
+  src={logo4}
   alt="SYLPOLE Logo"
-  className="h-16 md:h-24 mb-6 mx-auto"
+  className="h-20 md:h-28 mb-6 mx-auto"
 />
         
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white/60 mb-10">
