@@ -53,7 +53,7 @@ const ApplicationsSection = () => {
   return (
     <>
       <section
-        className="relative overflow-hidden pt-20 pb-36 bg-[#f4f4f2]"
+        className="relative overflow-hidden pt-20 pb-20 bg-[#f7f7f5]"
         id="applications"
       >
         {/* Top soft abstract blobs */}
@@ -81,20 +81,6 @@ const ApplicationsSection = () => {
             <div className="absolute left-[8px] top-[8px] w-[24px] h-[3px] bg-cyan-400 rotate-45 origin-left rounded-full" />
             <div className="absolute right-0 bottom-0 w-3 h-3 rounded-full bg-cyan-400" />
           </div>
-        </div>
-
-        {/* Bottom dark wave */}
-        <div className="absolute bottom-0 left-0 w-full z-0 leading-none">
-          <svg
-            viewBox="0 0 1440 320"
-            preserveAspectRatio="none"
-            className="w-full h-[190px] md:h-[220px]"
-          >
-            <path
-              fill="#46576b"
-              d="M0,192L48,218.7C96,245,192,299,288,304C384,309,480,267,576,250.7C672,235,768,245,864,245.3C960,245,1056,235,1152,192C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            />
-          </svg>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,7 +124,6 @@ const ApplicationsSection = () => {
         </div>
       </section>
 
-      {/* MODAL */}
       {activeApp && (
         <div
           onClick={() => setActiveApp(null)}
@@ -181,4 +166,4 @@ const ApplicationsSection = () => {
   );
 };
 
-export default ApplicationsSection;
+export default ApplicationsSection; 
