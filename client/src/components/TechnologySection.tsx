@@ -34,7 +34,7 @@ const TechnologySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-         {/* ================= OUR TECHNOLOGY ================= */}
+         {/* ================= OUR TECHNOLOGY ================== */}
 <div
   onClick={() => setOpenModal(true)}
   className="relative rounded-2xl overflow-hidden bg-white/2 backdrop-blur-md border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
