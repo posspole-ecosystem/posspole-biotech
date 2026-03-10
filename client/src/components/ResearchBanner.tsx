@@ -3,7 +3,7 @@ import researchBg from "../assets/research-bg.png";
 const ResearchBanner = () => {
   return (
     <section
-      className="relative py-32 bg-fixed bg-cover bg-center"
+  className="relative py-32 bg-fixed bg-cover bg-center overflow-hidden z-10"
       style={{
         backgroundImage: `url(${researchBg})`,
       }}
@@ -13,7 +13,7 @@ const ResearchBanner = () => {
           From Research to Solutions
         </h2>
 
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light">
+        <p className="text-xl text-white max-w-3xl mx-auto font-light">
           Bridging the gap between fundamental biology and scalable medical therapies.
         </p>
       </div>

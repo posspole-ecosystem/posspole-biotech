@@ -8,11 +8,12 @@ const PatentSection = () => {
               <span className="text-primary font-semibold uppercase tracking-wide text-xs mb-2 block">Founding Principles</span>
               <h3 className="text-2xl font-bold text-foreground mb-4">Patented Innovation</h3>
               <p className="text-muted-foreground mb-6">
-                Founded by a team of cell biologists and bioengineers, SYLPOLE holds 3 international patents protecting our unique synthesis process. Our scientific board ensures rigorous validation at every step.
+                Founded by a team of cell biologists and bioengineers, SYLPOLE holds 1 international patents protecting our unique synthesis process. Our scientific board ensures rigorous validation at every step.
+                Two more patents are coming next year.
               </p>
               <div className="flex gap-4">
                 <div className="flex flex-col">
-                  <span className="text-3xl font-bold text-primary">3</span>
+                  <span className="text-3xl font-bold text-primary">1</span>
                   <span className="text-xs text-muted-foreground uppercase">Patents</span>
                 </div>
                 <div className="w-px h-12 bg-border" />
@@ -22,7 +23,7 @@ const PatentSection = () => {
                 </div>
                 <div className="w-px h-12 bg-border" />
                 <div className="flex flex-col">
-                  <span className="text-3xl font-bold text-primary">5</span>
+                  <span className="text-3xl font-bold text-primary">20+</span>
                   <span className="text-xs text-muted-foreground uppercase">Yrs R&D</span>
                 </div>
               </div>
