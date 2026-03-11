@@ -1,4 +1,5 @@
 import { useState } from "react";
+import techBg from "../assets/tech-bg.png";
 
 const TechnologySection = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -24,30 +25,35 @@ const TechnologySection = () => {
   };
 
   return (
-    <section className="py-24 bg-background" id="technology">
+   <section
+  className="relative -mt-32 pt-40 pb-32 bg-cover bg-center overflow-hidden z-20"
+  id="technology"
+  style={{ backgroundImage: `url(${techBg})` }}
+>
+ {/*<div className="absolute inset-0 bg-[#4a5b6b]/80"></div>*/}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
          {/* ================= OUR TECHNOLOGY ================= */}
 <div
   onClick={() => setOpenModal(true)}
-  className="relative rounded-2xl overflow-hidden bg-surface-dark border border-foreground/5 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+  className="relative rounded-2xl overflow-hidden bg-white/2  border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
 >
   <div className="p-8 md:p-12 flex flex-col h-full">
     <div className="mb-6 w-16 h-16 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
       <span className="material-icons text-4xl">biotech</span>
     </div>
 
-    <h3 className="text-2xl font-bold text-primary-foreground mb-4">
+    <h3 className="text-2xl font-bold text-white mb-4">
       Our Technology
     </h3>
 
-    <p className="text-muted-foreground mb-8 flex-grow">
+    <p className="text-white/70 mb-8 flex-grow">
       Discover the bio-fabrication process that allows us to build ECMs with atomic precision, tailored to specific organ tissues.
     </p>
 
     {/* Button (visual only — card handles click) */}
-    <div className="inline-flex items-center px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors w-max">
+    <div className="inline-flex items-center px-6 py-3 border border-primary text-white hover:bg-primary hover:text-white rounded-lg transition-colors w-max">
       Learn more
       <span className="material-icons ml-2 text-sm">arrow_forward</span>
     </div>
@@ -57,22 +63,22 @@ const TechnologySection = () => {
           {/* ================= CLINICAL APPLICATIONS ================= */}
           <div
             onClick={() => setOpenClinicalModal(true)}
-            className="relative rounded-2xl overflow-hidden bg-surface-dark border border-foreground/5 shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+            className="relative rounded-2xl overflow-hidden bg-white/2  border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
           >
             <div className="p-8 md:p-12 flex flex-col h-full">
               <div className="mb-6 w-16 h-16 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400">
                 <span className="material-icons text-4xl">science</span>
               </div>
 
-              <h3 className="text-2xl font-bold text-primary-foreground mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Clinical Applications
               </h3>
 
-              <p className="text-muted-foreground mb-8 flex-grow">
+              <p className="text-white/70 mb-8 flex-grow">
                 From skin grafts to cardiac patches, explore how our technology is being deployed in pre-clinical and clinical settings.
               </p>
 
-             <div className="inline-flex items-center px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-colors w-max">
+             <div className="inline-flex items-center px-6 py-3 border border-primary text-white hover:bg-primary hover:text-white rounded-lg transition-colors w-max">
       Learn more
       <span className="material-icons ml-2 text-sm">arrow_forward</span>
               </div>
