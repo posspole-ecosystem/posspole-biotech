@@ -92,7 +92,7 @@ const PrincipleSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section>s
   );
 };
 
