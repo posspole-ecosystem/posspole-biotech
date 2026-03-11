@@ -25,19 +25,19 @@ const TechnologySection = () => {
   };
 
   return (
-    <section
-  className="relative py-32 bg-cover bg-center overflow-hidden"
+   <section
+  className="relative -mt-32 pt-40 pb-32 bg-cover bg-center overflow-hidden z-20"
   id="technology"
   style={{ backgroundImage: `url(${techBg})` }}
 >
-  
+ {/*<div className="absolute inset-0 bg-[#4a5b6b]/80"></div>*/}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-         {/* ================= OUR TECHNOLOGY ================== */}
+         {/* ================= OUR TECHNOLOGY ================= */}
 <div
   onClick={() => setOpenModal(true)}
-  className="relative rounded-2xl overflow-hidden bg-white/2 backdrop-blur-md border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+  className="relative rounded-2xl overflow-hidden bg-white/2  border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
 >
   <div className="p-8 md:p-12 flex flex-col h-full">
     <div className="mb-6 w-16 h-16 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
@@ -63,7 +63,7 @@ const TechnologySection = () => {
           {/* ================= CLINICAL APPLICATIONS ================= */}
           <div
             onClick={() => setOpenClinicalModal(true)}
-            className="relative rounded-2xl overflow-hidden bg-white/2 backdrop-blur-md border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+            className="relative rounded-2xl overflow-hidden bg-white/2  border border-white shadow-xl hover:shadow-2xl transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
           >
             <div className="p-8 md:p-12 flex flex-col h-full">
               <div className="mb-6 w-16 h-16 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-400">
