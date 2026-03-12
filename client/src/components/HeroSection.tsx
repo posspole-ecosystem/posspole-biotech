@@ -3,7 +3,7 @@ import AnimatedButton from "./AnimatedButton";
 import logo1 from "../assets/logo1.png";
 import logo2 from "../assets/logo2.png";
 import logo4 from "../assets/logo4.png";
-import heroBg from "../assets/hero-bg.jpg";
+import heroBg from "../assets/hero.png";
 
 
 const HeroSection = () => {
@@ -75,16 +75,17 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden hero-scene">
      <img
   ref={imgRef}
   src={heroBg}
   alt="Biotech background"
- className="absolute inset-0 w-full min-h-full object-cover object-center"
+ className="absolute inset-0 w-full min-h-full object-cover object-center hero-bg-image"
  />
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       <div ref={glowRef} className="hero-glow" />
-     <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 hero-main-overlay" />
+      <div className="absolute inset-0 hero-spotlight" />
 
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
 
@@ -111,10 +112,10 @@ const HeroSection = () => {
  <img
   src={logo4}
   alt="SYLPOLE Logo"
-  className="h-20 md:h-28 mb-6 mx-auto"
+  className="h-20 md:h-28 mb-6 mx-auto hero-logo-pop"
 />
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white mb-10">
+        <p className="text-lg max-w-2xl mx-auto text-white/90 mb-10 hero-copy-pop">
   The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
 </p>
         <AnimatedButton
