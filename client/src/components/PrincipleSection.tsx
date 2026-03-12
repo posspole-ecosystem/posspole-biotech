@@ -27,10 +27,11 @@ const PrincipleSection = () => {
               Reproducing the Physiological Environment
             </h2>
 
-            <div className="space-y-6 text-muted-foreground text-black leading-relaxed">
+            <div className="space-y-6 text-black leading-relaxed">
               <p>
                 At the core of our innovation lies a proprietary method to synthesize an Extracellular Matrix (ECM) that mimics nature itself. By combining 
-                <strong className="text-primary-light"> hyaluronic acid</strong> with key structural proteins, we create a scaffold that cells recognize as home.
+                hyaluronic acid with key structural proteins, we create a scaffold that cells recognize as home.
+               {/* <strong className="text-primary-light"> hyaluronic acid</strong>*/}
               </p>
 
               <p>
