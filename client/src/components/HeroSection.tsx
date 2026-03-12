@@ -1,8 +1,5 @@
 import { useEffect, useRef } from "react";
 import AnimatedButton from "./AnimatedButton";
-import logo1 from "../assets/logo1.png";
-import logo2 from "../assets/logo2.png";
-import logo4 from "../assets/logo4.png";
 import heroBg from "../assets/hero.png";
 
 
@@ -88,41 +85,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 hero-spotlight" />
 
      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20 text-center">
-
-  {/* 🔥 Logos Row */}
-  {/* <div className="flex justify-center items-center gap-5 mb-8">
-    <img
-      src={logo1}
-      alt="Partner Logo 1"
-      className="h-14 md:h-16 w-auto object-contain opacity-90"
-    />
-    <span className="text-3xl md:text-4xl font-semibold text-white">
-    &
-  </span>
-    <img
-      src={logo2}
-      alt="Partner Logo 2"
-      className="h-14 md:h-16 w-auto object-contain opacity-90"
-    />
-  </div> */}
-{/* <h2 className="text-2xl md:text-3xl text-white/60 mb-6 leading-relaxed">
-  Join their force to bring products and services <br />
-  in Indian market with
-</h2> */}
- <img
-  src={logo4}
-  alt="SYLPOLE Logo"
-  className="h-20 md:h-28 mb-6 mx-auto hero-logo-pop"
-/>
-        
-        <p className="text-lg max-w-2xl mx-auto text-white/90 mb-10 hero-copy-pop">
+        <p className="text-2xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-5xl mx-auto text-white mb-12 hero-copy-pop">
   The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
 </p>
+        <div className="inline-block scale-110 md:scale-125">
         <AnimatedButton
   text="Discover Our Technology"
   href="#principle"
   variant="light"
 />
+        </div>
       </div>
     </section>
   );
