@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import invitroImg from "../assets/invitro.jpg";
+import foodtechImg from "../assets/foodtech.jpg";
 
 const applications = [
   {
@@ -12,8 +14,7 @@ const applications = [
   {
     title: "In Vitro Tests",
     description: "Replacing animal testing with reliable human-based cell models.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDQMbtrXc1z0kRXu1Jm7mUAX1ktad2Wnf2xj_p5rV4WWLNOfy6lek5n0Q5p9tAucqrkKot9qWJ-HoOan9yHJcxQuE23sQTmuHCy--mKHw14Jz13Yy3wRFLQ_4eAQQcLWDPnn2TZwwglZGVFXpEI_eWgUS2NS5bFWODv3YkeOZtpsda3qFYpeforye_LucKGIo8u6ICJHpl4U73mPeTjcmmHDfb-HGvv2yaaOx5bG1Ov7gQhJFbesFS5DH2g4ZJxOlHG-LVFA5T-R40",
+    image: invitroImg,
     alt: "Microscope lens focusing on a slide sample",
     delay: "100ms",
   },
@@ -28,8 +29,7 @@ const applications = [
   {
     title: "FoodTech",
     description: "Enabling the cultivation of structured meat products.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAaw2F01XS5N9rNzBNr8fxNwkPOPFLk1L569zVHx0RUZJBrLN92nC35FFtQmfwGNXBu56k0QOBUpPHICzkpz-rIDUZSpRPnd1FTypm7Ilol4XTeErqcF7-LCj2PIgBscwgl0rdiwMHA2d5fqS2tIDfu9LgAIdY2qmsapr0Eqo-AIiK8EQjMErYV9nplo9stoP6Exuu7hYnDe4TZ-5_7DtSv-RHwu2J6LahhxeC9_OGPljYTlsWs5J2WSx8siyKbWgwWWaNpZ6S_I84",
+    image: foodtechImg,
     alt: "Close up of plant sprout in a laboratory test tube",
     delay: "300ms",
   },
@@ -139,44 +139,50 @@ const ApplicationsSection = () => {
       </section>
 
       {/* MODAL */}
-      {activeApp && (
-        <div
+     {activeApp && (
+  <div
+    onClick={() => setActiveApp(null)}
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md px-4 transition-opacity duration-300"
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="relative max-w-5xl w-full h-[520px] bg-[#0f172a] rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] grid md:grid-cols-2 animate-zoomIn">
+      {/* Image */}
+      <div className="overflow-hidden">
+        <img
+          src={activeApp.image}
+          alt={activeApp.alt}
+          className="w-full h-72 md:h-full object-cover transition-transform duration-700 hover:scale-110"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="p-10 text-white flex flex-col justify-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          {activeApp.title}
+        </h2>
+
+        <p className="text-white/70 leading-relaxed mb-4">
+          {activeApp.description}
+        </p>
+
+        <p className="text-white/60 leading-relaxed">
+          Our advanced extracellular matrix technology enhances predictive
+          biological modeling, accelerates research timelines, and reduces
+          experimental failure rates.
+        </p>
+
+        <button
           onClick={() => setActiveApp(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+          className="mt-8 self-start px-6 py-3 bg-cyan-500 text-white rounded-lg hover:scale-105 hover:bg-cyan-400 transition-all duration-300"
         >
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative max-w-5xl w-full bg-[#0f172a] rounded-3xl overflow-hidden shadow-2xl grid md:grid-cols-2 animate-zoomIn"
-          >
-            <img
-              src={activeApp.image}
-              alt={activeApp.alt}
-              className="w-full h-72 md:h-full object-cover"
-            />
-
-            <div className="p-10 text-white flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-6">{activeApp.title}</h2>
-
-              <p className="text-white/70 leading-relaxed mb-4">
-                {activeApp.description}
-              </p>
-
-              <p className="text-white/60 leading-relaxed">
-                Our advanced extracellular matrix technology enhances predictive
-                biological modeling, accelerates research timelines, and reduces
-                experimental failure rates.
-              </p>
-
-              <button
-                onClick={() => setActiveApp(null)}
-                className="mt-8 self-start px-6 py-3 bg-primary text-white rounded-lg hover:scale-105 transition-transform duration-300"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+      
     </>
   );
 };
