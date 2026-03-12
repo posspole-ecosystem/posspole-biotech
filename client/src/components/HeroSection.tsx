@@ -114,7 +114,7 @@ const HeroSection = () => {
   className="h-20 md:h-28 mb-6 mx-auto"
 />
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white/60 mb-10">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-white mb-10">
   The first in vitro extracellular matrix faithfully reproducing the physiological environment of organs.
 </p>
         <AnimatedButton
