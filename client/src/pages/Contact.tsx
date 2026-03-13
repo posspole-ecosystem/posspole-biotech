@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useScrollReveal } from "@/hooks/UseScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedButton from "@/components/AnimatedButton";

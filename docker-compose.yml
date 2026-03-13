@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: posspole-biotech-web
+    container_name: posspole-biotech-web
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT:-8086}:80"
+    restart: unless-stopped
